@@ -22,11 +22,14 @@ static int lua_redis_pack( lua_State *L ) {
     return 1;
 }
 
-static int lua_fcgi_unpack( lua_State *L ) {
+static int lua_redis_unpack( lua_State *L ) {
     size_t len;
     size_t pos = 0;
     const char *str = lua_tolstring(L, 1, &len);
 
+    (void)len;
+    (void)pos;
+    (void)str;
     lua_fail(L, "TODO", 0);
 }
 
